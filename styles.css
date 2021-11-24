@@ -16,7 +16,11 @@ body{
     display: flex;
     flex-flow: wrap;
 }
-
+.headline{
+    text-align: center;
+    text-emphasis: filled red;
+    -webkit-text-emphasis: filled wheat;
+}
 .card {
     padding: 20px;
     margin:20px;
@@ -27,4 +31,13 @@ body{
 }
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    background: wheat;
 }
