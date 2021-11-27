@@ -8,15 +8,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <form>
-        <label for="movieName">Movie name:</label>
-        <input type="text" id="movieName" name="movieName" placeholder="Example: Jumanji">
-        <input type="submit" value="Search">
-    </form>
+    <label for="movieName">Movie name:</label>
+    <input type="text" id="movieName" name="movieName" placeholder="Example: Jumanji">
+    <button onclick="getData()">Search</button>
 
     <div class="container">
         <div class="card">
-            <img src="" alt="Movie image">
+            <img src="poster-holder.jpg" alt="Movie image">
             <h2>movie Name</h2>
             <h3>Movie ratings</h3>
             <p>Movie description</p>

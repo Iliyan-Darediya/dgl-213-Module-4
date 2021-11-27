@@ -1,5 +1,7 @@
+let container = document.querySelector(".container")
 
-async function getData(movieName) {
+async function getData() {
+    let movieName = document.getElementById('movieName').value
     let data;
     let url = `https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=${movieName}&api-key=nvZZM6U8Hx6PFfbmSsbXkYnDzqj00xp6`
   
@@ -8,12 +10,21 @@ async function getData(movieName) {
       const response = await fetch(url);
       // Use the `.json` method on the fetch response object
       data = await response.json();
-      return data;
+      data.results.map(movie=>{
+          console.log(movie)
+          addDiv(container, movie)
+      })
     } catch (error) {
       console.log('error', error);
     }
 }
 
-getData("godfather").then(data=>{
-    return data.results
-})
+function addDiv(container, movie){
+    container.innerHTML +=
+    `<div class='card'>
+        <img class = 'card__image' src =${movie.multimedia ? movie.multimedia.src : 'poster-holder.jpg'} >
+        <h2>${movie.display_title}</h2>
+        <h3>${movie.publication_date}</h3>
+        <p>${movie.summary_short}</p>
+    </div>`
+}
