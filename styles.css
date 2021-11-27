@@ -18,7 +18,7 @@ body{
 }
 .headline{
     text-align: center;
-    text-emphasis: 'filled';
+    text-emphasis: filled wheat;
     -webkit-text-emphasis: filled wheat;
 }
 .card {
