@@ -1,7 +1,5 @@
-let movieGenre = document.getElementById('movieGenre').value;
 let container = document.querySelector(".container")
 
-console.log(movieGenre)
 let url = `https://api.nytimes.com/svc/movies/v2/critics/all.json?&api-key=nvZZM6U8Hx6PFfbmSsbXkYnDzqj00xp6`
 //let url = `https://api.nytimes.com/svc/movies/v2/critics/A.%20O.%20Scott.json?&api-key=nvZZM6U8Hx6PFfbmSsbXkYnDzqj00xp6`
 

@@ -21,10 +21,10 @@ async function getData() {
 
 function addDiv(container, movie){
     container.innerHTML +=
-    `<div class='card'>
+    `<a href = '${movie.link.url}' target = '_blank' class='card'>
         <img class = 'card__image' src =${movie.multimedia ? movie.multimedia.src : 'poster-holder.jpg'} >
         <h2>${movie.display_title}</h2>
         <h3>${movie.publication_date}</h3>
         <p>${movie.summary_short}</p>
-    </div>`
+    </a >`
 }
